@@ -152,27 +152,196 @@ EEE-Encyclopedia/
 
 ---
 
-## ⚡ Temel Mühendislik İlkeleri (Engineering First Principles)
+## 🔬 Teknik Bilgi Atlası (Technical Knowledge Atlas)
 
-Her iyi mühendis, bu denklemlerin sadece formül değil — evrenin işleyiş kodu olduğunu bilir:
+Bu bölüm, ansiklopedinin içinde yer alan kritik mühendislik konseptlerinin doğrudan README üzerinden erişilebilir **yoğunlaştırılmış özetini** sunar.
+
+---
+
+### ⚡ I. Devre Teorisi: Ağ Analizinin İskeleti
+
+Kirkchoff yasaları yalnızca iki çizgiden ibarettir, ancak bu iki çizgi milyarlarca dolarlık güç dağıtım ağlarını modellemek için hâlâ kullanılır:
 
 ```
-Maxwell Denklemleri (Tüm EM fenomeninin temeli):
-  ∇·E = ρ/ε₀          → Gauss (Elektrik)
-  ∇·B = 0              → Gauss (Manyetik)
-  ∇×E = −∂B/∂t        → Faraday
-  ∇×B = μ₀J + μ₀ε₀∂E/∂t → Ampère-Maxwell
+KCL (Kirchhoff's Current Law):   Σ Iₖ = 0   [Düğüme giren = Düğümden çıkan]
+KVL (Kirchhoff's Voltage Law):   Σ Vₖ = 0   [Kapalı döngüdeki voltaj düşümleri toplamı]
+```
 
-Kalman Filtresi (Sensör füzyonunun kalbi):
-  x̂ₖ = Axₖ₋₁ + Buₖ            [Tahmin]
-  Kₖ = PₖHᵀ(HPₖHᵀ + R)⁻¹      [Kazanç]
-  x̂ₖ = x̂ₖ + Kₖ(zₖ − Hx̂ₖ)     [Güncelleme]
+**Thevenin Eşdeğeri:** Herhangi bir lineer ağ, tek bir voltaj kaynağı ($V_{th}$) ve seri direnç ($R_{th}$) ile temsil edilebilir.
 
-Fourier Dönüşümü (Zaman→Frekans köprüsü):
-  X(jω) = ∫ x(t)e^(−jωt) dt
+```
+Vth = Voc (Açık devre gerilimi)
+Rth = Voc / Isc  (Kısa devre testi)
+Pmax = Vth² / (4·Rth)    → Maksimum güç transferi: ZL = Zth* koşulunda
+```
 
-Karakteristik Empedans (PCB hat tasarımının temeli):
-  Z₀ = √(L'/C')  →  50Ω (RF standardı)
+**RLC Geçici Hal**: İkinci dereceden sistem denkleminin karakteristik kökleri:
+
+```
+s² + 2αs + ω₀² = 0
+α = R/(2L)         [Sönümleme katsayısı]
+ω₀ = 1/√(LC)      [Doğal frekans]
+
+Overdamped    → α > ω₀  (gerçek, farklı kökler)
+Critically    → α = ω₀  (gerçel, yinelenen kökler — en hızlı kararlı cevap)
+Underdamped   → α < ω₀  (karmaşık kökler, ωd = √(ω₀²−α²) ile salınım)
+```
+
+> **Endüstriyel Bağlantı:** DDR5 güç hattı (1.1V VDDQ) üzerindeki MLCC'ler ve PCB izlerinin parazitik birlikte oluşturduğu RLC ağı **critically damped** olarak hedeflenmek zorundadır. Aksi hâlde CPU'nun ani akım çekimi sırasında gerilim titre—çok düşük voltajda CPU hataya düşer.
+
+---
+
+### 🧲 II. Elektromanyetik Teori: Maxwell'in Dört Yasası
+
+```
+Diferansiyel Form                   Fiziksel Anlam
+─────────────────────────────────────────────────────────────────
+∇·E  =  ρ/ε₀                    Elektrik alan kaynağı ≡ yük yoğunluğu
+∇·B  =  0                        Manyetik monopol yoktur
+∇×E  =  −∂B/∂t                  Değişen B → E girdabı (Faraday / EMF)
+∇×B  =  μ₀J + μ₀ε₀(∂E/∂t)     Akım ve değişen E → B girdabı
+```
+
+**Dalga Denklemi** (Maxwell'den türetilen):
+
+```
+∇²E − μ₀ε₀ (∂²E/∂t²) = 0
+Çözüm: E(z,t) = E₀ cos(ωt − βz)
+β = ω√(με) = 2π/λ              [Faz sabiti]
+vp = ω/β = 1/√(με)             [Faz hızı, boşlukta c = 3×10⁸ m/s]
+```
+
+**Poynting Vektörü** (Güç Yoğunluğu):
+
+```
+S = E × H     [W/m² — elektromanyetik güç akış yoğunluğu]
+```
+
+> **Mimarın Gözlemden Notu:** Bir USB-C 240W kablo besleme hattında enerji telin içinde değil, telin etrafındaki E ve H alanlarında — yani Poynting vektörünün gösterdiği uzaysal tüp boyunca akar. Bu nedenle kablo kalemi değil kablonun etrafındaki dielektrik katmanı "taşıyıcı" dır.
+
+---
+
+### 🔋 III. Yarı İletken Fiziği: Silikonun Temelleri
+
+**Bant Aralığı (Bandgap) Değerleri:**
+
+| Malzeme | Eg (eV) | Kullanım |
+|---|---|---|
+| Silikon (Si) | 1.12 | Genel dijital, güç elektroniği |
+| Galyum Arsenit (GaAs) | 1.42 | Mikrodalga PA, güneş pili |
+| Galyum Nitrür (GaN) | 3.4 | Yüksek güç/yüksek frekans (5G PA) |
+| Silikon Karbür (SiC) | 3.26 | Elektrikli araç invertörleri (800V) |
+| Elmas (C) | 5.5 | Deneysel, radiasyon-dayanıklı |
+
+**MOSFET Çalışma Bölgeleri:**
+
+```
+Kesim (Cutoff):    VGS < Vth       → Kanal yok, ID ≈ 0
+Lineer (Triode):   VDS < VGS−Vth  → ID ≈ µnCox(W/L)[(VGS−Vth)VDS − VDS²/2]
+Doyma (Saturation):VDS ≥ VGS−Vth  → ID = (1/2)µnCox(W/L)(VGS−Vth)²
+```
+
+> **Kuantum Limit:** 3nm teknoloji düğümlerinde kapı oksit tabakası yalnızca ~5 atom kalınlığındadır. Elektron bu bariyeri **kuantum tünelleme** sayesinde geçer ve bu kaçak akım (leakage) chip'in boşta güç tüketiminin temel kaynağına dönüşür. TSMC 2nm'de CFET (Complementary FET) mimarisiyle bu sorunu minimize etmeye çalışmaktadır.
+
+---
+
+### 📡 IV. Sinyaller & Sistemler: Dönüşümler ile Anlam Çıkarma
+
+**Fourier & Laplace Dönüşüm Çifti:**
+
+```
+Zaman Uzayı          Frekans/Laplace Uzayı     Fiziksel Anlam
+──────────────────────────────────────────────────────────────
+δ(t)              →    1                       İmpuls → Flat spectrum
+u(t)              →    1/s                     Adım fonksiyonu
+e^(−at)           →    1/(s+a)                 Azalan üstel
+sin(ω₀t)          →    ω₀/(s²+ω₀²)            Sinüs → iki kutup (±jω₀)
+```
+
+**Örnekleme Teoremi (Nyquist-Shannon):**
+
+```
+fs ≥ 2·fmax      [Örnekleme frekansı en az 2× bant genişliği]
+```
+
+Eğer bu kural ihlal edilirse **Aliasing** meydana gelir: yüksek frekanslar düşük frekans olarak yansır ve sinyal bozulur — geri dönüşü yoktur.
+
+**Bode Plot Kuralları (Asimptotik Yaklaşım):**
+
+```
+Basit Kutup: 1/(1+s/ωp)  → |H|: 0 dB (ωp'ye kadar), −20 dB/dekad (sonrası)
+                          → ∠H: 0° (0.1ωp), −45° (ωp), −90° (10ωp)
+İkinci Dereceden:         → −40 dB/dekad, rezonans tepesi: Q = ω₀/(2α)
+```
+
+---
+
+### 🔧 V. Gömülü Sistemler: ARM Cortex-M Derinlemesine
+
+**ARM Cortex-M Karşılaştırma Tablosu:**
+
+| Çekirdek | Bit | FPU | DSP | Tipik Uygulama |
+|---|---|---|---|---|
+| Cortex-M0+ | 32 | ❌ | ❌ | Ultra-düşük güç IoT sensörleri |
+| Cortex-M3 | 32 | ❌ | ❌ | Basit kontrol, genel amaçlı |
+| Cortex-M4 | 32 | ✅ (SP) | ✅ | Motor kontrolü, DSP, STM32F4 |
+| Cortex-M7 | 32 | ✅ (DP) | ✅ | Yüksek performans, STM32H7 |
+| Cortex-M33 | 32 | ✅ | ✅ | Güvenlik (TrustZone), IoT |
+
+**Register Mimarisi — Kritik Özel Registerlar:**
+
+```
+R0–R12   → Genel amaçlı registerlar
+R13 (SP) → Stack Pointer (MSP: Main, PSP: Process — RTOS için ayrı)
+R14 (LR) → Link Register (geri dönüş adresi ISR/fonksiyon)
+R15 (PC) → Program Counter
+xPSR     → İşlemci durum registerı (N, Z, C, V flag'leri)
+```
+
+**FreeRTOS Görev Durumları:**
+
+```
+         ┌──────────────────────────────┐
+         ▼                              │
+[Ready] → [Running] → [Blocked]  ──────┘ (delay/semaphore bitti)
+    ▲                    │
+    └────────────────────┘
+         [Suspended] (vTaskSuspend)
+```
+
+---
+
+### 📐 VI. PCB Mühendisliği: Sayılarla Endüstriyel Standartlar
+
+**IPC-2221 / IPC-2152: İz Genişliği — Akım Kapasitesi**
+
+```
+Harici İz (External Trace):   I = 0.048 × ΔT^0.44 × A^0.725
+İç İz (Internal Trace):       I = 0.024 × ΔT^0.44 × A^0.725
+[A = iz kesit alanı (mil²), ΔT = sıcaklık artışı (°C)]
+```
+
+**Yaygın Empedans Hedefleri:**
+
+| Sinyal Türü | Empedans | Standart |
+|---|---|---|
+| Tek Uçlu (Single-Ended) | 50Ω | RF, genel dijital |
+| LVDS Diferansiyel | 100Ω | Kamera, Video serdes |
+| USB 2.0 Diferansiyel | 90Ω | USB IF Spec |
+| USB 3.0 Diferansiyel | 85Ω | USB IF Spec |
+| DDR4 Data Bus | 40Ω | JEDEC |
+| HDMI Diferansiyel | 100Ω | HDMI Spec |
+
+**PCB Stackup Örneği (4 Katman, FR4):**
+
+```
+Layer 1 (Signal TOP)  — 35µm Cu
+Prepreg               — 0.2mm FR4 (ε_r ≈ 4.5)
+Layer 2 (GND)         — 35µm Cu  ← Referans düzlemi
+Core                  — 1.2mm FR4
+Layer 3 (PWR)         — 35µm Cu  ← Güç düzlemi
+Prepreg               — 0.2mm FR4
+Layer 4 (Signal BOT)  — 35µm Cu
 ```
 
 ---
