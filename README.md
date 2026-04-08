@@ -7,19 +7,24 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Status: Active](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
 [![Lab: Meta-Engineering](https://img.shields.io/badge/Lab-Meta--Engineering-purple.svg)]()
-[![Era: Post-AI](https://img.shields.io/badge/Era-Post--AI-black.svg)]()
+[![Era: Classic EEE](https://img.shields.io/badge/Era-Classic--Foundations-black.svg)]()
 
-> *"Teoriden pratiğe, atomdan otonom sistemlere."*
+> *"Teoriden pratiğe, elektronun doğasından sistemin mimarisine."*
 
 </div>
 
+> [!IMPORTANT]
+> **🚀 Post-AI Dönemine Geçiş Yapmak İsteyenler İçin:**
+> Bu ansiklopedi, mühendisliğin klasik ve değişmez temellerini (Elektromanyetik, Devre Teorisi, Gömülü Sistemler vb.) devasa bir derinlikle (high-density) inceler. Eğer doğrudan **Edge-AI, Modern Robotik, Otonom Sistemler ve Geleceğin Ar-Ge Metodolojilerine** odaklanmak istiyorsanız, resmi ileri düzey küratörlüğümüze geçiniz:
+> ➡️ **[Post-AI-EEE-Curriculum](https://github.com/arch-yunus/Post-AI-EEE-Curriculum)**
+
 ---
 
-## 🦅 Vizyon: "Meta-Engineering" Paradigm Shift
+## 🦅 Vizyon: Sarsılmaz Temeller (Unshakeable Foundations)
 
-**EEE-Encyclopedia**, sıradan bir akademik not deposu değildir. Geleneksel öğrenim metotlarının dışına çıkarak, bir Elektrik-Elektronik Mühendisi'ni salt bir teorisyen olmaktan çıkarıp **"Solo-Developer Product Creator"** ve **"System Architect"** seviyesine ulaştırmayı hedefleyen yüksek yoğunluklu (*high-density*) bir teknik ekosistemdir. 
+**EEE-Encyclopedia**, sıradan bir akademik not deposu değildir. Bir mühendisin donanım hızlandırmalı otonom sistemler veya yapay zeka tasarlamadan önce zihinsel olarak geçmesi gereken **"Katı Hal, Elektromanyetik ve Devre Teorisi"** ateş çemberidir. 
 
-Modern mühendislik artık sadece devre şemalarından ve V=I*R ezberinden ibaret değil; **Edge-AI**, **Otonom Sistemler**, **Gömülü Yazılım (RTOS)** ve **Donanım Hızlandırma** kavramlarının kusursuz bir entegrasyonudur. Bu kütüphane, bahsi geçen "Post-AI" vizyonunu gerçeğe dönüştürmek amacıyla tasarlandı.
+**"System Architect"** olmanın yolu, sinyalin pürüzsüz akışına ve elektronun matematiğine mutlak suretle hakim olmaktan geçer. Maxwell denklemlerini göremeyen bir zihin, otonom sistemlere yön veremez. Bu kütüphane, sizi devasa vizyonlara hazırlayan yüksek yoğunluklu (*high-density*) bir temel mühendislik klasikler ağıdır.
 
 ---
 
@@ -110,6 +115,6 @@ Proje ekosistemi, açık ve inovatif Ar-Ge kültürünü küresel ölçekte dest
 |:---:|:---:|:---:|
 | [Bahattin Yunus Çetin](https://github.com/arch-yunus) | Meta-Engineering Research Lab | Anka Silicon Dynamics |
 
-*© 2026 EEE-Encyclopedia. All Rights Reserved. Engineered for the Post-AI Era.*
+*© 2026 EEE-Encyclopedia. All Rights Reserved. Master the Foundations.*
 
 </div>
