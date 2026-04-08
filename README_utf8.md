@@ -1,3 +1,5 @@
+﻿
+
 # ⚡ EEE-Encyclopedia (Elektrik-Elektronik Mühendisliği Ansiklopedisi)
 
 ![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)
@@ -21,12 +23,13 @@ Mühendislik binasının yükseldiği temel taşlar.
 * **Sinyaller ve Sistemler:** Fourier, Laplace ve Z-Transformasyonları üzerine derinlemesine notlar.
 * **Yarı İletken Fiziği:** PN jonksiyonlarından MOSFET çalışma prensiplerine.
 
+
+
 ### 2. 💻 Yazılım ve Simülasyon (Digital Lab)
 Donanıma dokunmadan önce dünyayı simüle ettiğimiz araçlar.
 * **Matematiksel Modelleme:** MATLAB & Simulink (Kontrol ve DSP odaklı).
 * **Devre Simülasyonu:** LTspice ve PSpice ile karakteristik analizler.
-* **Programlama:** 
-    * **C/C++:** Gömülü sistemlerin ana dili.
+* **Programlama:** * **C/C++:** Gömülü sistemlerin ana dili.
     * **Python:** Veri analizi, AI ve mühendislik otomasyonu.
 
 ### 3. 🤖 Gömülü Sistemler ve Robotik (Embedded & Robotics)
@@ -35,6 +38,8 @@ Donanıma dokunmadan önce dünyayı simüle ettiğimiz araçlar.
 * **İşletim Sistemleri:** RTOS (FreeRTOS) temelleri.
 * **Modern Robotik:** ROS2 (Robot Operating System) ve otonom navigasyon.
 * **Kenar Yapay Zeka (Edge AI):** NVIDIA Jetson uygulamaları ve model optimizasyonu.
+
+
 
 ### 4. 📐 Donanım Tasarımı (Hardware Design - PCB)
 Fikirlerin fiziksel karta dökülme süreci.
@@ -61,9 +66,9 @@ Bu repo, kolektif bir öğrenme sürecinin parçasıdır.
 
 ## 📅 Güncel Durum (Monk Mode Takibi)
 * [x] Repo yapısı oluşturuldu.
-* [x] Devre Analizi-1 notları eklenecek. (Hedef: 15 Nisan)
-* [x] STM32 başlangıç rehberi taslağı hazırlanacak.
-* [x] Python for EEE kütüphanesi örnekleri eklenecek.
+* [ ] Devre Analizi-1 notları eklenecek. (Hedef: 15 Nisan)
+* [ ] STM32 başlangıç rehberi taslağı hazırlanacak.
+* [ ] Python for EEE kütüphanesi örnekleri eklenecek.
 
 ---
 
@@ -76,3 +81,4 @@ Bu proje [MIT Lisansı](LICENSE) altında korunmaktadır.
 **Founder:** [Bahattin Yunus Çetin](https://github.com/arch-yunus)  
 **Lab:** Meta-Engineering Research Lab  
 **Venture:** Anka Silicon Dynamics
+
