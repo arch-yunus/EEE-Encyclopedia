@@ -1,5 +1,7 @@
 <div align="center">
-  
+
+<img src="assets/banner.png" alt="EEE-Encyclopedia Banner" width="100%">
+
 # ⚡ EEE-Encyclopedia
 ### 🌌 THE DEFINITIVE ENGINEERING MASTERCLASS
 *Elektrik-Elektronik Mühendisliği Ansiklopedisi*
