@@ -10,6 +10,8 @@
 [![Status: Active](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
 [![Lab: Meta-Engineering](https://img.shields.io/badge/Lab-Meta--Engineering-purple.svg)]()
 [![Era: Classic EEE](https://img.shields.io/badge/Era-Classic--Foundations-black.svg)]()
+[![Docs: High-Density](https://img.shields.io/badge/Docs-High--Density-orange.svg)]()
+[![Content: Masterclass](https://img.shields.io/badge/Content-Masterclass-red.svg)]()
 
 > *"Teoriden pratiğe, elektronun doğasından sistemin mimarisine."*
 
@@ -24,9 +26,27 @@
 
 ## 🦅 Vizyon: Sarsılmaz Temeller (Unshakeable Foundations)
 
-**EEE-Encyclopedia**, sıradan bir akademik not deposu değildir. Bir mühendisin donanım hızlandırmalı otonom sistemler veya yapay zeka tasarlamadan önce zihinsel olarak geçmesi gereken **"Katı Hal, Elektromanyetik ve Devre Teorisi"** ateş çemberidir. 
+**EEE-Encyclopedia**, sıradan bir akademik not deposu değildir. Bir mühendisin donanım hızlandırmalı otonom sistemler veya yapay zeka tasarlamadan önce zihinsel olarak geçmesi gereken **"Katı Hal, Elektromanyetik ve Devre Teorisi"** ateş çemberidir.
 
 **"System Architect"** olmanın yolu, sinyalin pürüzsüz akışına ve elektronun matematiğine mutlak suretle hakim olmaktan geçer. Maxwell denklemlerini göremeyen bir zihin, otonom sistemlere yön veremez. Bu kütüphane, sizi devasa vizyonlara hazırlayan yüksek yoğunluklu (*high-density*) bir temel mühendislik klasikler ağıdır.
+
+> *"The ability to control electrons is the ability to control the future."*
+
+---
+
+## 📊 Ansiklopedi İstatistikleri
+
+<div align="center">
+
+| Metrik | Değer |
+|:---:|:---:|
+| 📁 Ana Katman | 5 |
+| 📄 Teknik Doküman | 20+ |
+| 🔬 Masterclass Modülü | 5 |
+| 📐 Formül & Denklem | 60+ |
+| 🏭 Endüstriyel Standart | IEEE, IPC, MIL-STD, DO-254, IEC 61508 |
+
+</div>
 
 ---
 
@@ -34,66 +54,137 @@
 
 Proje, temel fizikten endüstriyel seri üretime kadar tam ölçekli bir teknoloji geliştirme süreci sunan **5 Ana Katman** üzerine inşa edilmiştir.
 
+---
+
 ### 📚 Katman 1: Akademik Temeller (The Foundations)
 *Mühendisliğin değişmez gerçekleri ve fiziksel sınırları.*
-* **Devre & Ağ Analizi:** Ohm/Kirchhoff yasalarından RLC transient (geçici) durum cevaplarına ve kompleks empedans modellemelerine. 
-* **Elektromanyetik Teori & Mikrodalga:** Maxwell denklemlerinin ileri analitik formülasyonu, dalga kılavuzları (waveguides) ve anten ışıma spektrumları.
-* **Sinyaller ve Sistemler:** Fourier (CTFS/CTFT), Laplace ve Z-Transformasyonları ile ayrık zamanlı LTI (Lineer Zamanla Değişmeyen) sistemlerin derin analizi.
-* **Katı Hal & Yarı İletken Fiziği:** Kuantum mekaniği altyapısı, BJT/MOSFET kuantum tünelleme sınırları ve çip üretimindeki silikon vadisi mimarileri.
 
-### 💻 Katman 2: Yazılım ve Simülasyon (Digital Lab)
-*Fiziksel dünyayı bükmeden önce manipüle ettiğimiz dijital ikizler.*
-* **Matematiksel Modelleme:** MATLAB & Simulink ile non-lineer sistemlerin gelişmiş *state-space* (durum uzayı) dizaynı.
-* **Elektronik Simülasyon:** LTspice, PSpice ile Monte Carlo varyasyon testleri, S-Parametre analizleri ve termal profilleme.
-* **Programlama Ekosistemi:**
-    * **C/C++:** Gömülü donanımı manipüle eden, bellek yönetimini atomik seviyeye indiren (pointers, bitwise operations) ana dil.
-    * **Python:** TensorRT ve PyTorch destekli Edge-AI modelleri, makine öğrenmesi ve veri analitik pipeline'ları.
-
-### 🤖 Katman 3: Gömülü Sistemler ve Robotik (Embedded AI & Robotics)
-*Silikon tabanlı zekanın sensörler ve aktüatörler aracılığıyla gerçek dünyada vücut bulduğu seviye.*
-* **Mikrodenetleyici Mimarileri (MCU):** STM32 (ARM Cortex-M Serisi) için HAL (Hardware Abstraction Layer) ve Low-Layer (*bare-metal*) programlama teknikleri.
-* **Gerçek Zamanlı İşletim Sistemleri (RTOS):** FreeRTOS üzerinde *task scheduling*, Mutex/Semaphore asenkron yönetimi ve IPC (Inter-Process Communication).
-* **Modern Robotik & Navigasyon:** ROS2 (Humble) ekosistemi, Düğüm (Node) bazlı iletişim topolojileri, SLAM (Lidar/Camera odaklı) ve Sensor Fusion (Genişletilmiş Kalman Filtreleri).
-* **Kenar Yapay Zeka (Edge-AI):** NVIDIA Jetson (CUDA) platformlarında sıfır gecikmeli gerçek zamanlı obje tespiti (YOLO) ve otonom karar mekanizmaları.
-
-### 📐 Katman 4: Donanım Tasarımı (Hardware Design - PCB)
-*Kodun ve algoritmaların fiziksel prototiplere evrildiği nihai Ar-Ge katmanı.*
-* **Şematik Geliştirme:** Kritik komponent seçimi, BOM optimizasyonu ve sinyal bütünlüğü parametreleri.
-* **PCB Layout & Routing:** Altium Designer / KiCad ile empedans kontrollü (Impedance Controlled) routing, EMI/EMC girişim koruma teknikleri ve Multi-Layer (Çok Katmanlı) stackup tasarımı.
-* **Üretim (DFM/DFA):** Otonom dizgi makineleri için Gerber/NC Drill çıktıları oluşturma ve endüstriyel tasarıma hazırlık.
-
-### 🚀 Katman 5: Kariyer ve Endüstri (Professional Path)
-*Mühendisin sahaya inme, sektörel tahakküm kurma ve "Elite System Architect" markalaşması süreci.*
-* **Sektör Analizi:** Savunma sanayii odaklı mühimmat sistemleri, elektrikli araçlar (EV), yenilenebilir enerji ve otonom sistemlerdeki derin teknoloji (Deep-Tech) dinamikleri.
-* **TEKNOFEST & Ar-Ge Odaklı Yarışmalar:** KDR (Kritik Tasarım Raporu) hazırlama masterclass'ı, sistem test-doğrulama metodolojileri.
-* **Sertifikasyon:** Siber Vatan, BTK ve global yetkinlik belgeleri ile agresif sürekli gelişim stratejisi.
+| Konu | Derinlik | Masterclass |
+|---|---|---|
+| ⚡ Devre & Ağ Analizi | Nodal/Mesh Matrisleri, Thevenin, RLC Transient | — |
+| 🧲 Elektromanyetik Teori | Maxwell (İntegral+Diferansiyel), Poynting, Dalga | [🔗 Smith Chart & RF](01_Akademik_Temeller/02_Elektromanyetik/01_Advanced_RF_Smith_Chart.md) |
+| 📡 Sinyaller ve Sistemler | LTI, Fourier/Laplace, S-Plane Kutupları | [🔗 Kalman & LQR](01_Akademik_Temeller/03_Sinyaller_ve_Sistemler/01_Kalman_ve_Optimal_Kontrol.md) |
+| 🔋 Yarı İletken Fiziği | Band Teorisi, P-N Jonksiyon, MOSFET Kuantum Limitleri | — |
 
 ---
 
-## 🛠️ Klasör ve Dosya Hiyerarşisi (Ecosystem Structure)
+### 💻 Katman 2: Yazılım ve Simülasyon (Digital Lab)
+*Fiziksel dünyayı bükmeden önce manipüle ettiğimiz dijital ikizler.*
 
-Ansiklopedi katı kural setlerine sahip, modüler ve sürekli olarak genişletilebilir bir repository ağacında yaşamaktadır:
-```bash
+* **Matematiksel Modelleme:** MATLAB & Simulink ile non-lineer sistemlerin gelişmiş *state-space* (durum uzayı) dizaynı. `ss()`, `tf()`, `bode()`, `step()` fonksiyonlarının endüstriyel kullanımı.
+* **Elektronik Simülasyon:** LTspice, PSpice ile Monte Carlo varyasyon testleri ve Post-Layout parazitik ekstraksiyonu.
+* **Programlama Ekosistemi:**
+    * **C/C++:** Gömülü donanımı manipüle eden, bellek yönetimini atomik seviyeye indiren (pointers, bitwise operations) ana dil.
+    * **Python (NumPy/SciPy):** Butterworth/Chebyshev filtre tasarımı, FFT tabanlı spektrum analizi ve Kalman filtresi simülasyonları.
+
+---
+
+### 🤖 Katman 3: Gömülü Sistemler ve Robotik (Embedded & Robotics)
+*Silikon tabanlı zekanın sensörler ve aktüatörler aracılığıyla gerçek dünyada vücut bulduğu seviye.*
+
+| Konu | İçerik | Masterclass |
+|---|---|---|
+| 🔧 STM32 & MCU Mimarisi | HAL/LL/Bare-Metal, Clock/GPIO/DMA | — |
+| ⏱️ FreeRTOS & RTOS | Task Scheduling, Mutex, Semaphore, IPC | [🔗 RTOS Masterclass](03_Gomulu_Sistemler_ve_Robotik/02_Isletim_Sistemleri/01_RTOS_Masterclass_Cortex_M.md) |
+| 🤖 ROS2 & Navigasyon | Node/Topic, Nav2, SLAM, EKF Localization | — |
+| 🧠 Edge-AI | NVIDIA Jetson, TensorRT, Model Quantization | — |
+
+---
+
+### 📐 Katman 4: Donanım Tasarımı (Hardware Design - PCB)
+*Kodun ve algoritmaların fiziksel prototiplere evrildiği nihai Ar-Ge katmanı.*
+
+* **Şematik Geliştirme:** Kritik komponent seçimi, BOM optimizasyonu ve fonksiyonel blok diyagram yönetimi.
+* **PCB Layout & Routing:** Altium Designer / KiCad ile empedans kontrollü routing (50Ω Microstrip, 100Ω LVDS), EMI/EMC koruma teknikleri.
+* **Sinyal & Güç Bütünlüğü (SI/PI):** PDN hedef empedans hesabı, Anti-Resonance analizi. → [🔗 SI/PI/EMC Masterclass](04_Donanim_Tasarimi/01_Masterclass_SI_PI_EMC.md)
+* **Üretim (DFM/DFA):** Gerber/NC Drill çıktıları ve IPC-2221 tasarım standartları.
+
+---
+
+### 🚀 Katman 5: Kariyer ve Endüstri (Professional Path)
+*Mühendisin sahaya inme, sektörel tahakküm kurma ve "Elite System Architect" markalaşması süreci.*
+
+* **Savunma Sanayii:** MIL-STD-810 çevre testleri, DO-254/DO-178C sertifikasyon hiyerarşisi ve IEC 61508 Fonksiyonel Güvenlik temelleri. → [🔗 Systems Engineering Masterclass](05_Kariyer_ve_Endustri/01_Masterclass_Systems_Engineering.md)
+* **TEKNOFEST & KDR:** Yönetici özeti → sistem mimarisi → detaylı tasarım → V&V planı → FMEA sıralamasıyla profesyonel rapor anatomisi.
+* **Sertifikasyon:** Siber Vatan, BTK ve IEEE tabanlı global yetkinlik yolları.
+
+---
+
+## 🗺️ Tam İçerik Haritası (Full Content Map)
+
+```
 EEE-Encyclopedia/
-├── 01_Akademik_Temeller/               # Bilimin temel sınırları
-├── 02_Yazilim_ve_Simulasyon/           # Dijital test ortamları
-├── 03_Gomulu_Sistemler_ve_Robotik/     # Donanımsal yazılım zekası
-├── 04_Donanim_Tasarimi/                # Katı hal ve PCB mühendisliği
-└── 05_Kariyer_ve_Endustri/             # Pazar ve üretim stratejileri
+│
+├── 📂 01_Akademik_Temeller/
+│   ├── 01_Devre_Analizi/          → Nodal/Mesh, Thevenin, RLC Diferansiyel Denklemleri
+│   ├── 02_Elektromanyetik/        → Maxwell ×4, Poynting Vektörü
+│   │   └── 01_Advanced_RF_Smith_Chart.md  ★ MASTERCLASS
+│   ├── 03_Sinyaller_ve_Sistemler/ → LTI, Fourier/FFT, Laplace, S-Plane
+│   │   └── 01_Kalman_ve_Optimal_Kontrol.md ★ MASTERCLASS
+│   └── 04_Yari_Iletken_Fizigi/   → Band Theory, P-N Junction, MOSFET Küantum
+│
+├── 📂 02_Yazilim_ve_Simulasyon/
+│   ├── 01_Matematiksel_Modelleme/ → State-Space, MATLAB Tools
+│   ├── 02_Devre_Simulasyonu/      → SPICE, LTspice, Monte Carlo
+│   └── 03_Programlama/
+│       ├── C_Cpp/                 → Bare-metal, Pointer Arithmetic
+│       └── Python/                → DSP, Butterworth Filter, FFT Simülasyonu
+│
+├── 📂 03_Gomulu_Sistemler_ve_Robotik/
+│   ├── 01_Mikrodenetleyiciler/STM32/  → ARM Pipeline, HAL/LL/Bare-Metal, DMA
+│   ├── 02_Isletim_Sistemleri/         → FreeRTOS, Task, Priority Inversion
+│   │   └── 01_RTOS_Masterclass_Cortex_M.md  ★ MASTERCLASS
+│   ├── 03_Modern_Robotik/             → ROS2, Nav2, SLAM, DDS
+│   └── 04_Kenar_Yapay_Zeka/           → Jetson, TensorRT, Quantization
+│
+├── 📂 04_Donanim_Tasarimi/
+│   ├── 01_Masterclass_SI_PI_EMC.md   ★ MASTERCLASS
+│   ├── 01_Sematik_Cizim/             → BOM, ERC, Hierarchical Design
+│   ├── 02_PCB_Layout/                → Stackup, Impedance Control, DDR Routing
+│   └── 03_Araclar/                   → Altium, KiCad, Gerber
+│
+└── 📂 05_Kariyer_ve_Endustri/
+    ├── 01_Masterclass_Systems_Engineering.md  ★ MASTERCLASS
+    ├── 01_Sektor_Analizi/             → Savunma, Otomotiv, Tüketici Elektroniği
+    ├── 02_Sertifikasyonlar/           → Siber Vatan, BTK, IEEE
+    └── 03_TEKNOFEST_Rehberi/          → KDR Anatomisi, FMEA, V&V
 ```
 
 ---
 
-## 🧬 Açık Kaynak Yönetişimi (Governance & Contribution)
+## ⚡ Temel Mühendislik İlkeleri (Engineering First Principles)
 
-Bizler, kalite standartlarından ödün vermeyen **elit bir mühendislik topluluğu** oluşturmayı hedefliyoruz.
-Katkılarınız mutlak suretle global literatür standartlarını karşılamalıdır.
+Her iyi mühendis, bu denklemlerin sadece formül değil — evrenin işleyiş kodu olduğunu bilir:
 
-**Katkı Süreci Devamlılığı:**
-1. **Fork:** Repoyu kendi ortamınıza alın ve laboratuvarınıza kopyalayın.
-2. **Branching:** Üzerinde çalıştığınız modülü açıklayan anlamlı bir dal oluşturun. (Örnek: `feature/Kalman-Filter-Derivation`)
-3. **Commiting:** Semantic Commit mimarisi zorunludur. (`feat(robotics): add EKF mathematical derivation`)
-4. **Pull Request (PR):** Değişikliklerinizi akademik ve teknik açıklarla birlikte Review'a açın. Kod, devre veya teori alan uzmanları tarafından Peer-Review sürecinden geçecektir.
+```
+Maxwell Denklemleri (Tüm EM fenomeninin temeli):
+  ∇·E = ρ/ε₀          → Gauss (Elektrik)
+  ∇·B = 0              → Gauss (Manyetik)
+  ∇×E = −∂B/∂t        → Faraday
+  ∇×B = μ₀J + μ₀ε₀∂E/∂t → Ampère-Maxwell
+
+Kalman Filtresi (Sensör füzyonunun kalbi):
+  x̂ₖ = Axₖ₋₁ + Buₖ            [Tahmin]
+  Kₖ = PₖHᵀ(HPₖHᵀ + R)⁻¹      [Kazanç]
+  x̂ₖ = x̂ₖ + Kₖ(zₖ − Hx̂ₖ)     [Güncelleme]
+
+Fourier Dönüşümü (Zaman→Frekans köprüsü):
+  X(jω) = ∫ x(t)e^(−jωt) dt
+
+Karakteristik Empedans (PCB hat tasarımının temeli):
+  Z₀ = √(L'/C')  →  50Ω (RF standardı)
+```
+
+---
+
+## 🛠️ Nasıl Katkı Sağlanır? (Governance & Contribution)
+
+Bizler, kalite standartlarından ödün vermeyen **elit bir mühendislik topluluğu** oluşturmayı hedefliyoruz. Katkılarınız mutlak suretle global literatür standartlarını karşılamalıdır.
+
+1. **Fork:** Repoyu kendi ortamınıza alın.
+2. **Branch:** `git checkout -b feature/Kalman-Filter-Derivation`
+3. **Commit:** Semantic Commit zorunludur → `feat(electromagnetics): add cavity resonator derivation`
+4. **Pull Request:** Akademik kaynak veya simülasyon kanıtıyla birlikte Peer-Review'a açın.
 
 ---
 
@@ -102,11 +193,12 @@ Katkılarınız mutlak suretle global literatür standartlarını karşılamalı
 - [x] **Aşama 2:** Profesyonel Markdown Şablonları & Lisanslama yapılandırması.
 - [x] **Aşama 3:** Tüm akademik ve endüstriyel katmanların (STM32, PCB, AI, RTOS) içeriklerle doldurulması.
 - [x] **Aşama 4:** "The Definitive Engineering Masterclass" vizyonunun tamamlanması.
+- [x] **Aşama 5:** 5 adet Elite Masterclass modülünün (RF, Kalman, RTOS, SI/PI, Systems Eng.) yayınlanması.
 
 ---
 
-## 🛡️ Güvenlik ve Lisans
-Proje ekosistemi, açık ve inovatif Ar-Ge kültürünü küresel ölçekte desteklemek adına tam donanımlı [MIT Lisansı](LICENSE) kapsamında halka açılmıştır. Etik sınırlar çerçevesinde kalınarak endüstriyel ve makale çalışmalarınızda serbestçe kaynak gösterilebilir.
+## 🛡️ Lisans
+Proje ekosistemi, açık ve inovatif Ar-Ge kültürünü küresel ölçekte desteklemek adına tam donanımlı [MIT Lisansı](LICENSE) kapsamında halka açılmıştır. Etik sınırlar çerçevesinde endüstriyel ve akademik çalışmalarınızda serbestçe kaynak gösterilebilir.
 
 ---
 
@@ -116,6 +208,6 @@ Proje ekosistemi, açık ve inovatif Ar-Ge kültürünü küresel ölçekte dest
 |:---:|:---:|:---:|
 | [Bahattin Yunus Çetin](https://github.com/arch-yunus) | Meta-Engineering Research Lab | Anka Silicon Dynamics |
 
-*© 2026 EEE-Encyclopedia. All Rights Reserved. Master the Foundations.*
+*© 2026 EEE-Encyclopedia · All Rights Reserved · Master the Foundations.*
 
 </div>
